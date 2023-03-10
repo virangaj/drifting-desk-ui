@@ -1,6 +1,6 @@
 function SolidButton({ title, className }: any) {
 	return (
-		<button className={`${className && className} btn primary-btn`}>
+		<button className={`${className && className} solid-btn primary-btn`}>
 			{title}
 		</button>
 	);

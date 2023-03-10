@@ -8,6 +8,7 @@ module.exports = {
 				primary: 'var(--primary)',
 				footerBack: 'var(--footer-back)',
 				footerGrayBack: 'var(--footer-gray-back)',
+				grayText: 'var(--gray-text)',
 			},
 		},
 	},

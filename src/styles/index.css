@@ -21,9 +21,14 @@ body {
 	--primary: #38b4e5;
 	--footer-back: #101010;
 	--footer-gray-back: #202020;
+	--gray-text: #e1e1e1;
 }
 
-.clash-display-font {
+.gray-text {
+	color: var(--gray-text);
+}
+
+.clash-font {
 	font-family: 'clash-font';
 }
 
@@ -52,12 +57,15 @@ body {
 		@apply flex items-center justify-around;
 	}
 	.flex-area {
-		@apply flex items-center justify-between;
+		@apply flex flex-col items-center justify-between w-full md:flex-row md:mx-auto;
 	}
 
 	/* btns */
-	.btn {
+	.solid-btn {
 		@apply px-4 py-2 text-sm rounded-md lg:px-8 lg:text-base;
+	}
+	.outline-btn {
+		@apply flex items-center px-4 py-2 mt-4 text-2xl font-bold border rounded-md border-primary text-primary clash-font;
 	}
 
 	/* adding colors */
@@ -71,23 +79,50 @@ body {
 		@apply mx-4 text-sm cursor-pointer lg:mx-10 lg:text-base;
 	}
 	.main-title {
-		@apply font-extrabold text-center text-7xl;
+		@apply text-5xl font-extrabold text-center md:text-6xl lg:text-7xl;
+	}
+	.sub-main-text {
+		@apply mb-5 text-4xl font-extrabold text-center md:text-5xl lg:text-6xl md:text-left;
+	}
+	.hero-desc-text {
+		@apply text-center text-white w-full lg:w-[553px] mx-auto para-text;
+	}
+	.left-align-desc-text {
+		@apply text-center md:text-left w-[447px] mx-auto para-text;
+	}
+
+	.para-text {
+		@apply text-base font-normal lg:text-lg;
 	}
 
 	/* images */
 	.nav-logo {
-		@apply w-24 md:w-40 lg:w-auto;
+		@apply w-32 md:w-40 lg:w-auto;
 	}
 	.hero-image {
-		@apply mx-auto -mt-9;
+		@apply mx-auto -mt-5 md:-mt-8 lg:-mt-9;
 	}
 	.white-faded-elipse-image {
 		@apply mx-auto -mt-20 scale-125;
 	}
-	.hero-desc-text {
-		@apply text-center text-white w-[553px] mx-auto font-normal text-lg;
+	.flex-image {
+		@apply md:w-[50%] lg:w-[70%] xl:w-full mt-8 md:mt-0;
 	}
-	.left-align-desc-text {
-		@apply text-left text-white w-[447px] mx-auto font-normal text-lg;
-	}
+}
+
+/* addtional css */
+.outline-btn {
+	background: linear-gradient(
+		to right,
+		#ffffff00 50%,
+		var(--primary) 50%,
+		var(--primary)
+	);
+	background-size: 200%;
+	transition: 0.4s ease-out;
+}
+.outline-btn:hover {
+	background-position: -100%;
+	color: white;
+	border-color: white;
 }
