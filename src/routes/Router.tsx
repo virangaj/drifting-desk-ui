@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 //pages
 import Home from '.././pages/Home';
+import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import { RouteName } from '../constant/routeNames';
 import Blogs from '../pages/Blogs';
@@ -21,6 +22,7 @@ const AppRouter = () => {
 				<Route path={RouteName.Solutions} element={<Solutions />} />
 				<Route path={RouteName.ContactPage} element={<ContactPage />} />
 			</Routes>
+			<Footer />
 		</BrowserRouter>
 	);
 };

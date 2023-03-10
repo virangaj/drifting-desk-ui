@@ -6,6 +6,8 @@ module.exports = {
 			colors: {
 				navbarBack: 'var(--main-navbar-back)',
 				primary: 'var(--primary)',
+				footerBack: 'var(--footer-back)',
+				footerGrayBack: 'var(--footer-gray-back)',
 			},
 		},
 	},

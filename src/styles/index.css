@@ -4,17 +4,27 @@
 
 body {
 	margin: 0;
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-		sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	background: #101010;
 }
 
+@font-face {
+	font-family: 'clash-font';
+	src: local('AirbnbCerealLight'),
+		url('../font/FontsFree-Net-ClashDisplay-Variable.ttf') format('truetype');
+}
+
 :root {
 	--main-navbar-back: rgba(23, 23, 23, 0.8);
 	--primary: #38b4e5;
+	--footer-back: #101010;
+	--footer-gray-back: #202020;
+}
+
+.clash-display-font {
+	font-family: 'clash-font';
 }
 
 @layer components {
@@ -29,11 +39,20 @@ body {
 	.navbar-container {
 		@apply flex items-center justify-between w-[90%] lg:w-[80%] 2xl:w-[60%] mx-auto;
 	}
+	.main-body {
+		@apply text-white w-[90%] lg:w-[80%] 2xl:w-[60%] mx-auto mt-20;
+	}
+	.footer-section {
+		@apply w-full bg-footerBack h-[488px];
+	}
 
 	/* structuring */
 
 	.navber-link-section {
 		@apply flex items-center justify-around;
+	}
+	.flex-area {
+		@apply flex items-center justify-between;
 	}
 
 	/* btns */
@@ -43,7 +62,7 @@ body {
 
 	/* adding colors */
 	.primary-btn {
-		@apply bg-primary;
+		@apply text-white bg-primary;
 	}
 
 	/* text */
@@ -51,9 +70,24 @@ body {
 	.nav-link-text {
 		@apply mx-4 text-sm cursor-pointer lg:mx-10 lg:text-base;
 	}
+	.main-title {
+		@apply font-extrabold text-center text-7xl;
+	}
 
 	/* images */
 	.nav-logo {
 		@apply w-24 md:w-40 lg:w-auto;
+	}
+	.hero-image {
+		@apply mx-auto -mt-9;
+	}
+	.white-faded-elipse-image {
+		@apply mx-auto -mt-20 scale-125;
+	}
+	.hero-desc-text {
+		@apply text-center text-white w-[553px] mx-auto font-normal text-lg;
+	}
+	.left-align-desc-text {
+		@apply text-left text-white w-[447px] mx-auto font-normal text-lg;
 	}
 }
