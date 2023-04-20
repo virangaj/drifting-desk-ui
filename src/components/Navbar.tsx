@@ -1,8 +1,10 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
+//constant
 import { RouteName } from '../constant/routeNames';
-import Logo from '../images/Logo.svg';
+//components
 import SolidButton from './shared/SolidButton';
+// images
+import Logo from '../images/Logo.svg';
 
 const navLinks: any = [
 	{
