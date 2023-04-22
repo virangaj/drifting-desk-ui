@@ -78,10 +78,10 @@ body {
 		@apply w-16 h-16;
 	}
 	.service-card-container {
-		@apply w-full h-40 duration-300 rounded-md bg-serviceCardGrayBack;
+		@apply w-full h-40 mb-5 overflow-hidden duration-300 rounded-md bg-serviceCardGrayBack;
 	}
 	.service-card-container-active {
-		@apply w-full h-[540px] rounded-md duration-300 bg-serviceCardActiveBg;
+		@apply h-[540px] service-card-container bg-serviceCardActiveBg;
 	}
 	.service-detail-section {
 		@apply flex justify-between w-[90%] mx-auto;
@@ -145,7 +145,8 @@ body {
 
 /* addtional css */
 .outline-btn,
-.footer-arrow-body {
+.footer-arrow-body,
+.service-card-animation {
 	background: linear-gradient(
 		to right,
 		#ffffff00 50%,
@@ -163,4 +164,12 @@ body {
 .footer-arrow-body:hover {
 	background-position: -100%;
 	color: white;
+}
+.service-card-animation:hover {
+	background-position: -100%;
+	color: black;
+}
+
+.service-card-animation:hover .dot-color {
+	color: black;
 }
