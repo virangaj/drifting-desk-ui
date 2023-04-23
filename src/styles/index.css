@@ -86,6 +86,9 @@ body {
 	.service-detail-section {
 		@apply flex justify-between w-[90%] mx-auto;
 	}
+	.testamonial-card {
+		@apply w-[550px] h-[450px] bg-serviceCardGrayBack rounded-md p-14 flex flex-col justify-between;
+	}
 
 	/* btns */
 	.solid-btn {
@@ -172,4 +175,10 @@ body {
 
 .service-card-animation:hover .dot-color {
 	color: black;
+}
+
+/* react swipper */
+.swiper-pagination {
+	text-align: start !important;
+	overflow: visible !important;
 }

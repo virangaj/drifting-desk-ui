@@ -5,6 +5,7 @@ import HeroSection from './Home/HeroSection';
 import ServiceSection from './Home/ServiceSection';
 // images
 import HeroTexture from '../images/hero-texture.png';
+import TestimonialSection from './Home/TestimonialSection';
 
 export default function Home() {
 	return (
@@ -32,6 +33,9 @@ export default function Home() {
 				<AboutUsSection />
 				{/* ouser serrvice section */}
 				<ServiceSection />
+
+				{/* Testimonial section */}
+				<TestimonialSection />
 			</div>
 		</>
 	);
