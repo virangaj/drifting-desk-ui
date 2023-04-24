@@ -28,6 +28,9 @@ body {
 	--footer-gray-text: #e3e3e3;
 	--service-card-gray-back: #222222;
 	--service-card-active-bg: #13252d;
+	--A7A7A7: #a7a7a7;
+	--F2F2F2F: #2f2f2f;
+	--C1C1C1C: #1c1c1c;
 }
 
 .gray-text {
@@ -60,7 +63,7 @@ body {
 	}
 
 	.footer-container {
-		@apply w-[90%] lg:w-[80%] 2xl:w-[60%] bg-footerGrayBack h-[460px] absolute bottom-[200px] rounded-md;
+		@apply w-[90%] lg:w-[80%] 2xl:w-[60%] bg-footerGrayBack h-[460px] absolute bottom-[200px] rounded-3xl;
 	}
 	.footer-bottom-text-section {
 		@apply flex items-center justify-between w-[90%] lg:w-[80%] 2xl:w-[60%] text-gray-100 mt-20 text-[16px] text-footerGrayText font-thin;
@@ -88,6 +91,9 @@ body {
 	}
 	.testamonial-card {
 		@apply w-[550px] h-[450px] bg-serviceCardGrayBack rounded-md p-14 flex flex-col justify-between;
+	}
+	.become-a-customer {
+		@apply flex items-center justify-between w-full bg-serviceCardGrayBack rounded-3xl h-[614px] mt-40 p-20;
 	}
 
 	/* btns */
@@ -129,6 +135,9 @@ body {
 	}
 	.service-txt-head {
 		@apply text-3xl clash-font;
+	}
+	.small-title {
+		@apply text-3xl font-medium clash-font;
 	}
 
 	/* images */

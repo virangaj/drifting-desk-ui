@@ -12,11 +12,16 @@ module.exports = {
 				footerGrayText: 'var(--footer-gray-text)',
 				serviceCardGrayBack: 'var(--service-card-gray-back)',
 				serviceCardActiveBg: 'var(--service-card-active-bg)',
+				a7a7a7: 'var(--A7A7A7)',
+				c1c1c1c: 'var(--C1C1C1C)',
 			},
 			width: {
 				sm: 'var(--w-sm)',
 				lg: 'var(--w-lg)',
 				x2l: 'var(--w-2xl)',
+			},
+			scale: {
+				40: '0.40',
 			},
 		},
 	},

@@ -9,7 +9,7 @@ import HeroImage from '../../images/hero-image.svg';
 
 function HeroSection() {
 	return (
-		<div>
+		<>
 			<div className='main-body'>
 				<h1 className='main-title'>
 					enhancing digital
@@ -30,7 +30,7 @@ function HeroSection() {
 					<SolidButton title="Let's Connect" className='px-10 py-4 mt-6' />
 				</Link>
 			</div>
-		</div>
+		</>
 	);
 }
 
