@@ -6,4 +6,5 @@ export enum RouteName {
 	ContactPage = '/contactPage',
 	Operations = '/operations',
 	Solutions = '/solutions',
+	About = '/about',
 }

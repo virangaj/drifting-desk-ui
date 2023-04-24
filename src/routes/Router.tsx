@@ -9,6 +9,7 @@ import Blogs from '../pages/Blogs';
 import ContactPage from '../pages/ContactPage';
 import Operations from '../pages/Operations';
 import Solutions from '../pages/Solutions';
+import About from '../pages/About';
 
 const AppRouter = () => {
 	return (
@@ -21,6 +22,7 @@ const AppRouter = () => {
 				<Route path={RouteName.Operations} element={<Operations />} />
 				<Route path={RouteName.Solutions} element={<Solutions />} />
 				<Route path={RouteName.ContactPage} element={<ContactPage />} />
+				<Route path={RouteName.About} element={<About />} />
 			</Routes>
 			<Footer />
 		</BrowserRouter>

@@ -1,29 +1,15 @@
-import React from 'react';
-import HeroTexture from '../images/hero-texture.png';
 import HeroSection from './solution/HeroSection';
 import BlueWhiteTablet from './solution/BlueWhiteTablet';
 import HeadingText from '../components/shared/HeadingText';
 import { FiArrowUpRight } from 'react-icons/fi';
 import PercentageCard from './solution/PercentageCard';
 import ParaText from '../components/shared/ParaText';
+import BackgroundImage from '../components/shared/BackgroundImage';
 
 export default function Solutions() {
 	return (
 		<>
-			<div
-				id='back-img'
-				style={{
-					background: `url(${HeroTexture}) center no-repeat`,
-					backgroundSize: '100%',
-					position: 'absolute',
-					zIndex: -10,
-					height: '500px',
-					top: '80px',
-					overflow: 'hidden',
-					width: '100%',
-					transform: 'scaleY(2)',
-				}}
-			></div>
+			<BackgroundImage />
 
 			<HeroSection />
 			<div className='main-body'>
