@@ -14,6 +14,7 @@ module.exports = {
 				serviceCardActiveBg: 'var(--service-card-active-bg)',
 				a7a7a7: 'var(--A7A7A7)',
 				c1c1c1c: 'var(--C1C1C1C)',
+				line: 'var(--line)',
 			},
 			width: {
 				sm: 'var(--w-sm)',

@@ -7,10 +7,60 @@ import JobViewer from './jobOpenings/JobViewer';
 
 const backendJobs = [
 	{
-		title: 'Backend Developer',
+		title: 'Back End Developer',
 		desc: 'We are seeking a senior back end developer to join our team.',
 		type: 'Remote',
-		time: 'Full Time',
+		time: 'Full-Time',
+	},
+	{
+		title: 'Back End Developer',
+		desc: 'We are seeking a senior back end developer to join our team.',
+		type: 'Remote',
+		time: 'Full-Time',
+	},
+];
+
+const UIJobs = [
+	{
+		title: 'UI/UX Designer',
+		desc: 'We are seeking a seniorUI/UX Designer to join our team.',
+		type: 'Remote',
+		time: 'Full-Time',
+	},
+	{
+		title: 'UI/UX Designer',
+		desc: 'We are seeking a senior UI/UX Designer to join our team.',
+		type: 'Remote',
+		time: 'Full-Time',
+	},
+];
+
+const frontendJobs = [
+	{
+		title: 'Front End Developer',
+		desc: 'We are seeking a senior front end developer to join our team.',
+		type: 'Remote',
+		time: 'Full-Time',
+	},
+	{
+		title: 'Front End Developer',
+		desc: 'We are seeking a senior front end developer to join our team.',
+		type: 'Remote',
+		time: 'Full-Time',
+	},
+];
+const FullStackJobs = [
+	{
+		title: 'Full Stack Engineer',
+		desc: 'We are seeking a seniorFull Stack Engineer to join our team.',
+		type: 'Remote',
+		time: 'Full-Time',
+	},
+	{
+		title: 'Full Stack Engineer',
+		desc: 'We are seeking a senior Full Stack Engineer to join our team.',
+		type: 'Remote',
+		time: 'Full-Time',
 	},
 ];
 
@@ -92,7 +142,7 @@ function JobOpenings() {
 				</div>
 
 				{/* tab show section */}
-				<div>
+				<div className='mt-20 mb-40'>
 					{activeTab === 0 ? (
 						<>
 							{backendJobs.map((j: any, i: number) => (
@@ -100,13 +150,44 @@ function JobOpenings() {
 							))}
 						</>
 					) : activeTab === 1 ? (
-						<p>UI/UX</p>
+						<>
+							{UIJobs.map((j: any, i: number) => (
+								<JobViewer {...j} />
+							))}
+						</>
 					) : activeTab === 2 ? (
-						<p>Frntend</p>
+						<>
+							{frontendJobs.map((j: any, i: number) => (
+								<JobViewer {...j} />
+							))}
+						</>
 					) : (
-						<p>Full Stack</p>
+						<>
+							{FullStackJobs.map((j: any, i: number) => (
+								<JobViewer {...j} />
+							))}
+						</>
 					)}
 				</div>
+
+				{/* why work with us  */}
+				<HeadingText title='why work with us?' />
+
+				<p className='para-text'>
+					At <span className='font-medium text-primary'>Drifting Desk</span>,
+					we're committed to creating a positive work environment that
+					encourages growth, innovation, and collaboration. We offer competitive
+					compensation packages, comprehensive benefits, and opportunities for
+					professional development. We also have a diverse and inclusive culture
+					that values teamwork, creativity, and work-life balance.
+				</p>
+
+				<p className='mt-10 para-text'>
+					Ready to join our team? Click on the{' '}
+					<span className='font-medium text-primary'>"Apply"</span> button on
+					each job listing to submit your application. We look forward to
+					hearing from you!
+				</p>
 			</div>
 		</>
 	);
