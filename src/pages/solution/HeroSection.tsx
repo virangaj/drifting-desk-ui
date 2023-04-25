@@ -43,6 +43,7 @@ function HeroSection() {
 				<img
 					src='https://i.pinimg.com/originals/53/c6/03/53c603b5424be3c25fb60c70356e05c5.jpg'
 					className='w-[50%] rounded-lg ml-10'
+					alt='hero pic'
 				/>
 			</div>
 		</div>

@@ -2,8 +2,6 @@ import { AiFillStar } from 'react-icons/ai';
 import ParaText from '../../../components/shared/ParaText';
 
 function TestimonialCard({ star, name, role, img, desc }: any) {
-	const num = 5;
-
 	return (
 		<div className='cursor-default testamonial-card'>
 			<div className='flex'>

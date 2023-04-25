@@ -46,7 +46,11 @@ function ServiceCard({ title, img, desc }: any) {
 
 				{active ? (
 					<div className='relative service-detail-section'>
-						<img src={img} className='w-[50%] rounded-md mr-10' />
+						<img
+							src={img}
+							className='w-[50%] rounded-md mr-10'
+							alt='service card pic'
+						/>
 						<div className='w-[50%]'>
 							<p className='para-text'>
 								Lorem ipsum dolor sit amet consectetur adipisicing elit. At
