@@ -1,0 +1,194 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background: #101010;
+}
+
+@font-face {
+	font-family: 'clash-font';
+	src: local('AirbnbCerealLight'),
+		url('../font/FontsFree-Net-ClashDisplay-Variable.ttf') format('truetype');
+}
+
+:root {
+	--main-navbar-back: rgba(23, 23, 23, 0.8);
+	--primary: #38b4e5;
+	--footer-back: #101010;
+	--footer-gray-back: #202020;
+	--gray-text: #e1e1e1;
+	--w-sm: '90%';
+	--w-lg: '80%';
+	--w-2xl: '60%';
+	--footer-gray-text: #e3e3e3;
+	--service-card-gray-back: #222222;
+	--service-card-active-bg: #13252d;
+	--A7A7A7: #a7a7a7;
+	--F2F2F2F: #2f2f2f;
+	--C1C1C1C: #1c1c1c;
+	--line: #636363;
+}
+
+.gray-text {
+	color: var(--gray-text);
+}
+
+.clash-font {
+	font-family: 'clash-font';
+}
+
+@layer components {
+	/* structuring */
+	body {
+		@apply bg-navbarBack;
+	}
+	.main-body {
+		@apply text-white w-[90%] lg:w-[80%] 2xl:w-[60%] mx-auto mt-36;
+	}
+	.navbar-section {
+		@apply w-full h-[74px] fixed top-0 text-white bg-navbarBack backdrop-blur-md  flex items-center z-50;
+	}
+	.navbar-container {
+		@apply flex items-center justify-between mx-auto w-sm lg:w-lg 2xl:w-x2l;
+	}
+	.navber-link-section {
+		@apply flex items-center justify-around;
+	}
+	.footer-section {
+		@apply bg-footerBack h-[408px] flex justify-center items-center relative mt-[400px];
+	}
+
+	.footer-container {
+		@apply w-[90%] lg:w-[80%] 2xl:w-[60%] bg-footerGrayBack h-[460px] absolute bottom-[200px] rounded-3xl;
+	}
+	.footer-bottom-text-section {
+		@apply flex items-center justify-between w-[90%] lg:w-[80%] 2xl:w-[60%] text-gray-100 mt-20 text-[16px] text-footerGrayText font-thin;
+	}
+	.flex-area {
+		@apply flex flex-col items-center justify-between w-full md:flex-row md:mx-auto;
+	}
+
+	/* components css */
+
+	.footer-arrow-body {
+		@apply border-4 text-primary cursor-pointer rounded-full ml-9 border-primary w-[116px] h-[116px] flex items-center justify-center;
+	}
+	.footer-arrow {
+		@apply w-16 h-16;
+	}
+	.service-card-container {
+		@apply w-full h-40 mb-5 overflow-hidden duration-300 rounded-md bg-serviceCardGrayBack;
+	}
+	.service-card-container-active {
+		@apply h-[540px] service-card-container bg-serviceCardActiveBg;
+	}
+	.service-detail-section {
+		@apply flex justify-between w-[90%] mx-auto;
+	}
+	.testamonial-card {
+		@apply w-[550px] h-[450px] bg-serviceCardGrayBack rounded-md p-14 flex flex-col justify-between;
+	}
+	.become-a-customer {
+		@apply flex items-center justify-between w-full bg-serviceCardGrayBack rounded-3xl h-[614px] mt-40 p-20;
+	}
+
+	/* btns */
+	.solid-btn {
+		@apply px-4 py-2 text-sm rounded-md lg:px-8 lg:text-base;
+	}
+	.outline-btn {
+		@apply flex items-center px-4 py-2 mt-4 text-2xl font-bold border rounded-md border-primary text-primary clash-font;
+	}
+
+	/* adding colors */
+	.primary-btn {
+		@apply text-white bg-primary;
+	}
+
+	/* text */
+
+	.nav-link-text {
+		@apply mx-4 text-sm cursor-pointer lg:mx-10 lg:text-base;
+	}
+	.main-title {
+		@apply text-5xl font-extrabold text-center md:text-6xl lg:text-7xl clash-font;
+	}
+	.sub-main-text {
+		@apply mb-5 text-4xl font-extrabold text-center md:text-5xl lg:text-6xl md:text-left;
+	}
+	.hero-desc-text {
+		@apply text-center text-white w-full lg:w-[553px] mx-auto para-text;
+	}
+	.left-align-desc-text {
+		@apply text-center md:text-left w-[447px] mx-auto para-text;
+	}
+	.para-text {
+		@apply text-base font-thin lg:text-lg;
+	}
+
+	.footer-icon {
+		@apply w-8 h-8 p-1 mx-3 bg-white rounded-md cursor-pointer;
+	}
+	.service-txt-head {
+		@apply text-3xl clash-font;
+	}
+	.small-title {
+		@apply text-3xl font-medium clash-font;
+	}
+
+	/* images */
+	.nav-logo {
+		@apply w-32 md:w-40 lg:w-auto;
+	}
+	.hero-image {
+		@apply mx-auto -mt-5 md:-mt-8 lg:-mt-9;
+	}
+	.white-faded-elipse-image {
+		@apply mx-auto -mt-20 scale-125;
+	}
+	.flex-image {
+		@apply md:w-[50%] lg:w-[70%] xl:w-full mt-8 md:mt-0;
+	}
+}
+
+/* addtional css */
+.outline-btn,
+.footer-arrow-body,
+.service-card-animation {
+	background: linear-gradient(
+		to right,
+		#ffffff00 50%,
+		var(--primary) 50%,
+		var(--primary)
+	);
+	background-size: 200%;
+	transition: 0.4s ease-out;
+}
+.outline-btn:hover {
+	background-position: -100%;
+	color: white;
+	border-color: white;
+}
+.footer-arrow-body:hover {
+	background-position: -100%;
+	color: white;
+}
+.service-card-animation:hover {
+	background-position: -100%;
+	color: black;
+}
+
+.service-card-animation:hover .dot-color {
+	color: black;
+}
+
+/* react swipper */
+.swiper-pagination {
+	text-align: start !important;
+	overflow: visible !important;
+}
